@@ -1,0 +1,14 @@
+[Unit]
+Description=service to keep a reverse shell open to your jump server
+Wants=network-online.target
+After=network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+ExecStart=/etc/systemd/support/com.jondayley.reverseShellService/main.sh
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
