@@ -16,21 +16,21 @@ echo Linking support files...
 sudo ln -s "$repoDir"/main.sh $serviceDir/main.sh
 
 # Get input
-echo "Address (no port or user):"
+echo -e "\033[01mAddress\033[0m (no port or user)\033[01m:\033[0m"
 read jaddress
-echo "Port:"
+echo -e "\033[01mPort:\033[0m"
 read jport
-echo "User:"
+echo -e "\033[01mUser:\033[0m"
 read juser
-echo "Private key location (absolute path):"
+echo -e "\033[01mPrivate key location\033[0m (absolute path)\033[01m:\033[0m"
 read jkey
 
 # Confirm input
-echo "Settings:
-	Address:  $jaddress
-	Port:     $jport
-	User:     $juser
-	Key path: $jkey"
+echo -e "Settings:
+	\033[01mAddress:\033[0m  $jaddress
+	\033[01mPort:\033[0m     $jport
+	\033[01mUser:\033[0m     $juser
+	\033[01mKey path:\033[0m $jkey"
 while [[ $confirmAnswer != y ]]
 do
 	echo -e "Type \033[32my\033[0m to confirm or \033[31mn\033[0m to cancel."
@@ -51,12 +51,12 @@ echo Enabling service...
 sudo systemctl enable $serviceFile
 
 # Echo done
-echo Done!
+echo -e "\033[01mDone!\033[0m"
 
 # Echo instructions
 echo Please run the following commands to start the service:
-echo "	sudo systemctl daemon-reload"
-echo "	sudo systemctl start com.jondayley.reverseShellService.service"
+echo "	\033[32msudo systemctl daemon-reload\033[0m"
+echo "	\033[32msudo systemctl start com.jondayley.reverseShellService.service\033[0m"
 
 # Exit
 exit 0
