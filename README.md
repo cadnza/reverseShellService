@@ -1,5 +1,7 @@
 # Reverse Shell Service
 
+![](https://img.shields.io/github/v/release/cadnza/reverseShellService)
+
 Keeps a reverse shell on your Linux box open on your jump server. 🌌 Awfully handy for remote administration (as long as you have proper access control). 💂‍♀️
 
 ## How does it work?
