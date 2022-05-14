@@ -5,16 +5,11 @@ repoDirPre=$(dirname $0)
 cd $repoDirPre
 repoDir=$PWD
 
-# Validate directories
-echo Validating directories...
-supportDir=/etc/systemd/support
-serviceDir=$supportDir/com.jondayley.reverseShellService
-dirs="$supportDir
-$serviceDir"
-echo $dirs | while read -r dirSingle
-do
-	[[ -d $dirSingle ]] || sudo mkdir $dirSingle
-done
+# Rebuild directories
+echo Rebuilding directories...
+serviceDir=/etc/systemd/com.jondayley.reverseShellService
+[[ -d $serviceDir ]] && sudo rm -rf $serviceDir
+sudo mkdir $serviceDir
 
 # Link main script
 echo Linking support files...
