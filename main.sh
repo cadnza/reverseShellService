@@ -4,7 +4,7 @@
 messagevf="Please run setup.sh."
 
 # Validate directories
-serviceDir=/etc/systemd/com.jondayley.reverseShellService
+serviceDir=/etc/systemd/system/com.jondayley.reverseShellService
 [[ -d $serviceDir ]] || {
 	echo $messagevf
 	exit 1

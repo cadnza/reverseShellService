@@ -7,7 +7,7 @@ repoDir=$PWD
 
 # Rebuild directories
 echo Rebuilding directories...
-serviceDir=/etc/systemd/com.jondayley.reverseShellService
+serviceDir=/etc/systemd/system/com.jondayley.reverseShellService
 [[ -d $serviceDir ]] && sudo rm -rf $serviceDir
 sudo mkdir $serviceDir
 

