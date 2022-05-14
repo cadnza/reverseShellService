@@ -53,5 +53,10 @@ sudo systemctl enable $serviceFile
 # Echo done
 echo Done!
 
+# Echo instructions
+echo Please run the following commands to start the service:
+echo "	sudo systemctl daemon-reload"
+echo "	sudo systemctl start com.jondayley.reverseShellService.service"
+
 # Exit
 exit 0
