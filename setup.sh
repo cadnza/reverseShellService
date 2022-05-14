@@ -18,7 +18,7 @@ done
 
 # Link main script
 echo Linking support files...
-sudo ln -s $repoDir/main.sh $serviceDir/main.sh
+sudo ln -s "$repoDir"/main.sh $serviceDir/main.sh
 
 # Get input
 echo "Address (no port or user):"
