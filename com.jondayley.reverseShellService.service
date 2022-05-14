@@ -1,5 +1,5 @@
 [Unit]
-Description=service to keep a reverse shell open to your jump server
+Description=Service to keep a reverse shell open to your jump server
 Wants=network-online.target
 After=network-online.target
 StartLimitIntervalSec=0
