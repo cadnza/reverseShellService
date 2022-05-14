@@ -1,8 +1,9 @@
 #!/usr/bin/env zsh
 
 # Go to repo directory
-repoDir=$(dirname $0)
-cd $repoDir
+repoDirPre=$(dirname $0)
+cd $repoDirPre
+repoDir=$PWD
 
 # Validate directories
 echo Validating directories...
