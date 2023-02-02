@@ -7,7 +7,7 @@ repoDir=$PWD
 
 # Rebuild directories
 echo Rebuilding directories...
-serviceDir=/etc/systemd/system/com.jondayley.reverseShellService
+serviceDir=/etc/systemd/system/com.cadnza.reverseShellService
 [[ -d $serviceDir ]] && sudo rm -rf $serviceDir
 sudo mkdir $serviceDir
 
@@ -46,7 +46,7 @@ echo $juser | sudo tee $serviceDir/user &> /dev/null
 echo $jkey | sudo tee $serviceDir/key &> /dev/null
 
 # Enable service
-serviceFile=$repoDir/com.jondayley.reverseShellService.service
+serviceFile=$repoDir/com.cadnza.reverseShellService.service
 echo Enabling service...
 sudo systemctl enable $serviceFile
 
@@ -56,7 +56,7 @@ echo -e "\033[01mDone!\033[0m"
 # Echo instructions
 echo Please run the following commands to start the service:
 echo "	\033[32msudo systemctl daemon-reload\033[0m"
-echo "	\033[32msudo systemctl start com.jondayley.reverseShellService.service\033[0m"
+echo "	\033[32msudo systemctl start com.cadnza.reverseShellService.service\033[0m"
 
 # Exit
 exit 0
