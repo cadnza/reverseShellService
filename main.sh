@@ -28,6 +28,9 @@ jkey=$(cat $serviceDir/key) 2> /dev/null || {
 	exit 1
 }
 
+# Set log file
+flog=$serviceDir/log
+
 # Open reverse shell
 ssh -qNn \
 	-o ServerAliveInterval=30 \
@@ -37,7 +40,9 @@ ssh -qNn \
 	-o UserKnownHostsFile=/dev/null \
 	-i "$jkey" \
 	-R "$jport":localhost:22 \
-	"$juser"@"$jaddress" || exit 1
+	"$juser"@"$jaddress" \
+	-vv \
+	2> $flog || exit 1
 
 # Exit (formality)
 exit 0
