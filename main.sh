@@ -37,7 +37,7 @@ ssh -qNn \
 	-o UserKnownHostsFile=/dev/null \
 	-i "$jkey" \
 	-R "$jport":localhost:22 \
-	"$juser"@"$jaddress"
+	"$juser"@"$jaddress" | exit 1
 
 # Exit (formality)
 exit 0
